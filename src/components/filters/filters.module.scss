@@ -1,0 +1,89 @@
+@import "../app/css/const.module";
+
+.filters{
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    background-color: $filters-background;
+    @media (min-width:600px) {
+        max-width: 220px;
+        padding-bottom: 10px;
+        margin: {
+            right: 20px;
+            bottom: 0;
+        }
+    }
+
+    &Container {
+        @extend %flex-column-start;
+        margin: 0 auto;
+        @media (min-width:768px) {
+            max-width: 230px;
+        }
+    }
+
+    &Title {
+        @extend %flex-row-center;
+        justify-content: space-between;
+        padding: 20px;
+
+        &Text {
+            font: {
+                family: OpenSansSemibold;
+                size: 0.75em;
+                weight: 600;
+            }
+            line-height: 0.75em;
+            vertical-align: bottom;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            color: $filters-title;
+        }
+
+        &Icon {
+            height: 14px;
+            @media (min-width: 600px) {
+                display: none;
+            }
+        }
+    }
+
+    &List {
+        width: 100%;
+        display: none;
+        @media (min-width: 600px) {
+            display: block;
+        }
+
+        &Item {
+            width: 100%;
+            padding: 8px 20px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $filter-hover;
+            }
+        }
+
+        &Visible {
+            display: block;
+        }
+    }
+}
+
+.filter {
+    @extend %flex-row-center;
+    cursor: pointer;
+
+    &Image {
+        margin-right: 10px;
+    }
+
+    &Text {
+        font: {
+            family: OpenSansRegular;
+            size: 13px;
+        };
+        line-height: 1.25em;
+    }
+}

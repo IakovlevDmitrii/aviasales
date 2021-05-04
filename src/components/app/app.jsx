@@ -1,23 +1,28 @@
 import React from 'react';
 
-import './app.css';
 import Logo from '../logo';
-import Filter from '../filter';
+import Filters from '../filters';
 import Tabs from '../tabs';
 import Tickets from '../tickets';
+import Footer from '../footer';
+import classes from './css/app.module.scss';
 
-const App = () => {
-  const hello = 'Hello World';
+const { app, main, tickets } = classes;
 
+function App() {
   return (
-    <div className="app">
+    <div className={app}>
       <Logo />
-      <Filter />
-      <Tabs />
-      <Tickets />
-      <p>{hello}</p>
+      <div className={main}>
+        <Filters />
+        <div className={tickets}>
+          <Tabs />
+          <Tickets />
+          <Footer />
+        </div>
+      </div>
     </div>
-  )
-};
+  );
+}
 
 export default App;

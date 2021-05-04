@@ -1,0 +1,79 @@
+/* Extra small devices (phones, 600px and down) */
+//@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+//@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+//@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+//@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+//@media only screen and (min-width: 1200px) {...}
+
+//===== COLORS =====
+$brand_primary_3: #2196F3;
+$brand_primary_2: #F3F7FA;
+$brand_primary_1: #FFFFFF;
+
+$text-primary_1: #4A4A4A;
+$text-primary_2: #A0B0B9;
+
+$body-background: $brand_primary_2;
+
+$filters-background: $brand_primary_1;
+$filters-title: $text-primary_1;
+$filter-hover: $brand_primary_2;
+
+$selections-background: $brand_primary_1;
+$selection-border: #DFE5EC;
+$selection-hover: $brand_primary_2;
+$selection-active-background: $brand_primary_3;
+$selection-active-text: $brand_primary_1;
+
+$ticket-background: $brand_primary_1;
+$ticket-price: $brand_primary_3;
+$ticket-label-font: $text-primary_2;
+$ticket-value-font: $text-primary_1;
+$ticket-border: #979797;
+
+$footer-background: $brand_primary_3;
+$footer-text: $brand_primary_1;
+
+//===== FLEX =====
+%flex-row-center {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   width: 100%;
+}
+
+%flex-row-stretch {
+   display: flex;
+   flex-direction: row;
+   align-items: stretch;
+   width: 100%;
+}
+
+%flex-column-center {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
+
+%flex-column-stretch {
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+   width: 100%;
+}
+
+%flex-column-start {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   width: 100%;
+}

@@ -1,0 +1,54 @@
+@import '../app/css/const.module';
+
+.selections {
+  @extend %flex-column-center;
+  max-width: 400px;
+  background-color: $selections-background;
+  margin-bottom: 10px;
+  @media (min-width:700px) {
+    max-width: 100%;
+    flex-direction: row;
+  }
+}
+
+.selection {
+  @extend %flex-row-center;
+  border: 1px solid $selection-border;
+
+  &:hover {
+    background-color: $selection-hover;
+  }
+//.selectionActive.selection
+  &Active#{&} {
+    color: $selection-active-text;
+    background-color: $selection-active-background;
+  }
+
+  @media (min-width:700px) {
+    width: 33.3333%;
+
+    &:nth-child(1) {
+      border-bottom-left-radius: 7px;
+      border-top-left-radius: 7px;
+    }
+
+    &:nth-child(3) {
+      border-bottom-right-radius: 7px;
+      border-top-right-radius: 7px;
+    }
+  }
+
+  &Button {
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    font: {
+      family: OpenSansSemibold;
+      size: 0.75em;
+      weight: 600;
+    };
+    line-height: 1.25em;
+    text-transform: uppercase;
+    background-clip: content-box;
+  }
+}

@@ -1,20 +1,20 @@
 import React from 'react';
 
 import Ticket from '../ticket';
+import styles from './tickets.module.scss';
 
-import './tickets.css';
+const { tickets } = styles;
 
-const Tickets = () => {
-  const hello = 'Hello World';
-
+function Tickets() {
   return (
-    <div className='tickets'>
+    <div className={tickets}>
       <Ticket />
       <Ticket />
       <Ticket />
-      {hello}
+      <Ticket />
+      <Ticket />
     </div>
-  )
-};
+  );
+}
 
 export default Tickets;

@@ -1,0 +1,90 @@
+//===== Open Sans =====
+//light
+@font-face{
+    font-family: 'OpenSansLight';
+    src: local("OpenSans-Light"),
+         url('../../../utils/fonts/OpenSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+//light italic
+@font-face{
+    font-family: 'OpenSansLightItalic';
+    src: local("OpenSans-LightItalic"),
+         url('../../../utils/fonts/OpenSans-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+//regular
+@font-face{
+    font-family: 'OpenSansRegular';
+    src: local("OpenSans-Regular"),
+         url('../../../utils/fonts/OpenSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+//semi bold
+@font-face{
+    font-family: 'OpenSansSemibold';
+    src: local("OpenSans-Semibold"),
+         url('../../../utils/fonts/OpenSans-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+//semi bold italic
+@font-face{
+    font-family: 'OpenSansSemiboldItalic';
+    src: local("OpenSans-SemiboldItalic"),
+         url('../../../utils/fonts/OpenSans-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+//bold
+@font-face{
+    font-family: 'OpenSansBold';
+    src: local("OpenSans-Bold"),
+         url('../../../utils/fonts/OpenSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+//bold italic
+@font-face{
+    font-family: 'OpenSansBoldItalic';
+    src: local("OpenSans-BoldItalic"),
+         url('../../../utils/fonts/OpenSans-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+//extra bold
+@font-face{
+    font-family: 'OpenSansExtraBold';
+    src: local("OpenSans-ExtraBold"),
+         url('../../../utils/fonts/OpenSans-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+//extra bold italic
+@font-face{
+    font-family: 'OpenSansExtraBoldItalic';
+    src: local("OpenSans-ExtraBoldItalic"),
+         url('../../../utils/fonts/OpenSans-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+//italic
+@font-face{
+    font-family: 'OpenSansItalic';
+    src: local("OpenSans-Italic"),
+         url('../../../utils/fonts/OpenSans-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}

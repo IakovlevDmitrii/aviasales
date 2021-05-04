@@ -1,0 +1,114 @@
+@import '../app/css/const.module';
+
+.ticket {
+   @extend %flex-column-stretch;
+   max-width: 400px;
+   margin: 0 auto 10px;
+   padding: 10px;
+   border: 1px solid $ticket-border;
+   border-radius: 5px;
+   box-shadow: 0 1px 5px rgb(0 0 0 / 15%);
+   background-color: $ticket-background;
+   @media (min-width:600px) {
+      max-width: 100%;
+   }
+
+   &Header {
+      @extend %flex-row-center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+   }
+
+   &Price {
+      color: $ticket-price;
+      font: {
+         family: OpenSansSemibold;
+         size: 1.5em;
+      }
+      line-height: 1.5em;
+   }
+
+   &Carriers {
+      margin-left: auto;
+   }
+
+   &Carrier {
+      display: inline-block;
+      position: relative;
+      vertical-align: top;
+      font-size: 0;
+
+      &List {
+      @extend %flex-row-center;
+
+         &Item {
+            display: inline-block;
+            line-height: 0;
+         }
+      }
+
+      &Img {
+         width: auto;
+         max-height: 30px;
+      }
+   }
+
+   &Body {
+      @extend %flex-column-stretch;
+      padding-top: 10px;
+   }
+
+   &Segment {
+      @extend %flex-row-stretch;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      &:not(:first-child) {
+         margin-top: 15px;
+      }
+
+   &Flight {
+      min-width: 90px;
+
+      &:nth-child(2) {
+         min-width: 70px;
+      }
+
+      &:not(:last-child) {
+         padding-right: 10px;
+      }
+
+      &Label {
+         font: {
+            family: OpenSansSemibold;
+            size: 0.75em;
+         }
+         line-height: 18px;
+         letter-spacing: 0.5px;
+         text-transform: uppercase;
+         color: $ticket-label-font;
+      }
+
+      &Value {
+         font: {
+            family: OpenSansSemibold;
+            size: 14px;
+         }
+         line-height: 1.5em;
+         margin: 0;
+         color: $ticket-value-font;
+         overflow: hidden;
+         white-space: nowrap;
+         text-overflow: ellipsis;
+      }
+    }
+   }
+}
+
+.price {
+   white-space: nowrap;
+}
+
+.currencySign {
+   font-family: -apple-system,Roboto,Currency Font,Helvetica,Arial,sans-serif;
+}
