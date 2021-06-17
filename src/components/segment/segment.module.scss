@@ -1,0 +1,11 @@
+
+@import '../app/styles/const.module';
+
+.segment {
+   @extend %flex-row-stretch;
+   flex-wrap: nowrap;
+   justify-content: space-between;
+      &:not(:first-child) {
+         margin-top: 15px;
+      }
+}

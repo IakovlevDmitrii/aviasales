@@ -1,0 +1,55 @@
+
+@import '../app/styles/const.module';
+
+.sorters {
+   @extend %flex-column-center;
+   max-width: 400px;
+   background-color: $sorters-background;
+   margin-bottom: 10px;
+   @media (min-width:700px) {
+      max-width: 100%;
+      flex-direction: row;
+   }
+}
+
+.sorter {
+   @extend %flex-row-center;
+   border: 1px solid $sorter-border;
+
+   &:hover {
+      background-color: $sorter-hover;
+   }
+   /* .sorterActive.sorter */
+   &Active#{&} {
+      color: $sorter-active-text;
+      background-color: $sorter-active-background;
+   }
+
+   @media (min-width:700px) {
+      width: 50%;
+
+      &:nth-child(1) {
+         border-bottom-left-radius: 7px;
+         border-top-left-radius: 7px;
+      }
+
+      &:nth-child(2) {
+         border-bottom-right-radius: 7px;
+         border-top-right-radius: 7px;
+      }
+   }
+
+   &Button {
+      width: 100%;
+      padding: 10px;
+      cursor: pointer;
+      font: {
+         family: OpenSansSemibold;
+         size: 0.75em;
+         weight: 600;
+      };
+      line-height: 1.25em;
+      text-transform: uppercase;
+      background-clip: content-box;
+   }
+}

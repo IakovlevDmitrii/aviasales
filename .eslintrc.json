@@ -5,7 +5,10 @@
     "eslint-config-prettier",
     "prettier"
   ],
-  "plugins": ["react"],
+  "plugins": [
+    "react",
+    "react-hooks"
+  ],
   "parser": "babel-eslint",
   "env": {
     "browser": true,

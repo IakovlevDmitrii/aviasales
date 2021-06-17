@@ -1,28 +1,27 @@
+
 import React from 'react';
+import {withClass} from '../hoc';
 
 import Logo from '../logo';
 import Filters from '../filters';
-import Tabs from '../tabs';
-import Tickets from '../tickets';
-import Footer from '../footer';
-import classes from './css/app.module.scss';
+import Sorters from '../sorters';
+import TicketListContainer from '../../containers/ticket-list-container';
 
-const { app, main, tickets } = classes;
+import styles from './styles/app.module.scss';
 
-function App() {
-  return (
-    <div className={app}>
-      <Logo />
-      <div className={main}>
-        <Filters />
-        <div className={tickets}>
-          <Tabs />
-          <Tickets />
-          <Footer />
-        </div>
-      </div>
-    </div>
-  );
-}
+const {app, main, ticketsSection} = styles;
 
-export default App;
+const App = () => (
+  <>
+    <Logo />
+    <main className={main}>
+      <Filters />
+      <section className={ticketsSection}>
+        <Sorters />
+        <TicketListContainer />
+      </section>
+    </main>
+  </>
+);
+
+export default withClass(app)(App)

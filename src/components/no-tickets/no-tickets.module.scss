@@ -1,0 +1,19 @@
+
+@import '../app/styles/const.module';
+
+.noTickets {
+   @extend %flex-row-center;
+   justify-content: center;
+   text-align: center;
+   max-width: 400px;
+   min-height: 140px;
+   margin: 0 auto 10px;
+   padding: 10px;
+   border: 1px solid $ticket-border;
+   border-radius: 5px;
+   box-shadow: 0 1px 5px rgb(0 0 0 / 15%);
+   background-color: $ticket-background;
+   @media (min-width:600px) {
+      max-width: 100%;
+   }
+}

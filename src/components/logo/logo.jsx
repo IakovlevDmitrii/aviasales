@@ -1,16 +1,18 @@
+
 import React from 'react';
+import {withClass} from '../hoc';
 
-import logoSource from './images/logo.png';
-import classes from './logo.module.scss';
+import logoSource from './logo.png';
+import styles from './logo.module.scss';
 
-const { logo, logoImage } = classes;
+const {logo, logoImage} = styles;
 
-function Logo() {
-  return (
-    <div className={logo}>
-      <img className={logoImage} src={logoSource} alt="aviasales logo" />
-    </div>
-  );
-}
+const Logo = () => (
+  <img
+    className={logoImage}
+    src={logoSource}
+    alt="aviasales logo"
+  />
+);
 
-export default Logo;
+export default withClass(logo)(Logo);
