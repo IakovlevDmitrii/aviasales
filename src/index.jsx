@@ -1,20 +1,16 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 
 import App from './components/app';
 import ErrorBoundary from './components/error-boundary';
-import aviasalesService from './services';
-import {AviasalesServiceProvider} from './components/aviasales-service-context';
-import store from './store';
+
+import store from './store/store';
 
 ReactDOM.render(
   <Provider store={store}>
     <ErrorBoundary>
-      <AviasalesServiceProvider value={aviasalesService}>
-        <App />
-      </AviasalesServiceProvider>
+      <App />
     </ErrorBoundary>
   </Provider>,
   document.getElementById('root')

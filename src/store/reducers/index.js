@@ -1,20 +1,19 @@
+import { combineReducers } from 'redux';
 
-import {combineReducers} from 'redux'
-
+import allTicketsLoaded from './all-tickets-loaded';
 import isCheckedFilters from './is-checked-filters';
 import isFiltersOpen from './is-filters-open';
-import loading from './loading';
 import sortingMethod from './sorting-method';
 import ticketsError from './tickets-error';
-import ticketsLoaded from './tickets-loaded';
+import ticketsSetLoaded from './tickets-set-loaded';
 
 const reducer = combineReducers({
+  allTicketsLoaded,
   isCheckedFilters,
   isFiltersOpen,
-  loading,
   sortingMethod,
-  error: ticketsError,
-  tickets: ticketsLoaded,
+  hasError: ticketsError,
+  tickets: ticketsSetLoaded,
 });
 
 export default reducer;

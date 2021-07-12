@@ -1,14 +1,10 @@
-
 /* список названий методов сортировки */
 const sortingMethodsNames = {
   CHEAPEST: 'CHEAPEST',
   FASTEST: 'FASTEST',
 };
 
-const {
-  CHEAPEST,
-  FASTEST,
-} = sortingMethodsNames;
+const { CHEAPEST, FASTEST } = sortingMethodsNames;
 
 /* Список методов сортировки */
 const sortingMethodsList = [
@@ -16,7 +12,4 @@ const sortingMethodsList = [
   { name: FASTEST, label: 'Самый быстрый' },
 ];
 
-export {
-  sortingMethodsNames,
-  sortingMethodsList,
-}
+export { sortingMethodsNames, sortingMethodsList };

@@ -8,7 +8,7 @@ body {
 
 .app {
   @extend %flex-column-center;
-  min-width: 290px;
+  min-width: 320px;
   max-width: 800px;
   margin: {
     left: auto;
@@ -22,13 +22,19 @@ body {
   vertical-align: bottom;
 }
 
+.logo {
+  @extend %flex-column-center;
+  padding: 5px 0 0;
+
+  &Image {
+    width: 60px;
+  }
+}
+
 .main {
   @extend %flex-column-center;
   @media (min-width:320px) {
     padding: 0 10px;
-  }
-  @media (min-width:320px) {
-    padding: 0 20px;
   }
   @media (min-width:600px) {
     flex-direction: row;

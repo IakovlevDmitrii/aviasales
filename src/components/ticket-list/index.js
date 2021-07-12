@@ -1,4 +1,3 @@
+import TicketListTest from './ticket-list';
 
-import TicketList from './ticket-list';
-
-export default TicketList;
+export default TicketListTest;

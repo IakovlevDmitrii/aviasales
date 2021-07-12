@@ -1,27 +1,27 @@
-
 import React from 'react';
-import {withClass} from '../hoc';
 
-import Logo from '../logo';
 import Filters from '../filters';
 import Sorters from '../sorters';
-import TicketListContainer from '../../containers/ticket-list-container';
+import TicketList from '../ticket-list';
 
 import styles from './styles/app.module.scss';
+import logoSource from './logo.png';
 
-const {app, main, ticketsSection} = styles;
+const { app, logo, logoImage, main, ticketsSection } = styles;
 
 const App = () => (
-  <>
-    <Logo />
+  <div className={app}>
+    <div className={logo}>
+      <img className={logoImage} src={logoSource} alt="aviasales logo" />
+    </div>
     <main className={main}>
       <Filters />
       <section className={ticketsSection}>
         <Sorters />
-        <TicketListContainer />
+        <TicketList />
       </section>
     </main>
-  </>
+  </div>
 );
 
-export default withClass(app)(App)
+export default App;

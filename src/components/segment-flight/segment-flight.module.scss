@@ -1,26 +1,8 @@
-
 @import '../app/styles/const.module';
 
 .flight {
-   &:nth-child(1) {
-      width: 35%;
-      @media (min-width:700px) {
-         width: 40%;
-      }
-   }
-   &:nth-child(2) {
-      width: 30%;
-      padding: 0 6px;
-      @media (min-width:700px) {
-         width: 30%;
-      }
-   }
-   &:nth-child(3) {
-      width: 35%;
-      @media (min-width:700px) {
-         width: 30%;
-      }
-   }
+   width: 33.33%;
+
    &Label {
       font: {
          family: OpenSansSemibold;
@@ -31,13 +13,13 @@
       text-transform: uppercase;
       color: $ticket-label-font;
       @media (min-width:768px) {
-         font-size: 14px;
+         font-size: 12px;
       }
    }
    &Value {
       font: {
          family: OpenSansSemibold;
-         size: 14px;
+         size: 12px;
       }
       line-height: 1.5em;
       margin: 0;
@@ -46,7 +28,7 @@
       white-space: nowrap;
       text-overflow: ellipsis;
       @media (min-width:768px) {
-         font-size: 16px;
+         font-size: 14px;
       }
    }
 }

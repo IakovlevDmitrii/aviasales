@@ -1,4 +1,3 @@
-
 const filtersNames = {
   ALL_TRANSFERS: 'ALL_TRANSFERS',
   WITHOUT_TRANSFERS: 'WITHOUT_TRANSFERS',
@@ -7,13 +6,7 @@ const filtersNames = {
   THREE_TRANSFERS: 'THREE_TRANSFERS',
 };
 
-const {
-  ALL_TRANSFERS,
-  WITHOUT_TRANSFERS,
-  ONE_TRANSFERS,
-  TWO_TRANSFERS,
-  THREE_TRANSFERS
-} = filtersNames;
+const { ALL_TRANSFERS, WITHOUT_TRANSFERS, ONE_TRANSFERS, TWO_TRANSFERS, THREE_TRANSFERS } = filtersNames;
 
 const filterList = [
   { name: ALL_TRANSFERS, label: 'Все' },
@@ -23,7 +16,4 @@ const filterList = [
   { name: THREE_TRANSFERS, label: '3 пересадки' },
 ];
 
-export {
-  filtersNames,
-  filterList,
-};
+export { filtersNames, filterList };

@@ -1,8 +1,6 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import Segment from '../segment';
-import { withClass } from '../hoc';
 import { transformPrice } from '../../utils';
 
 import styles from './ticket-list-item.module.scss';
@@ -20,23 +18,15 @@ const {
   currencySign,
 } = styles;
 
-const TicketListItem = ({ticketData}) => {
-  const {
-    price,
-    carrier,
-    flightThere,
-    flightBack,
-  } = ticketData;
-
-  const alternateText = `${carrier} logo`;
-  const cost = transformPrice(price);
+const TicketListItem = ({ ticketData }) => {
+  const { price, carrier, flightThere, flightBack } = ticketData;
 
   return (
-    <>
+    <div className={ticket}>
       <div className={ticketHeader}>
         <div className={ticketPrice}>
           <span className={styles.price}>
-            {cost}
+            {transformPrice(price)}
             <span className={currencySign}> ₽</span>
           </span>
         </div>
@@ -46,8 +36,8 @@ const TicketListItem = ({ticketData}) => {
               <div className={ticketCarrier}>
                 <img
                   className={ticketCarrierImg}
-                  src={`http://pics.avs.io/99/36/${ carrier }.png`}
-                  alt={alternateText}
+                  src={`http://pics.avs.io/99/36/${carrier}.png`}
+                  alt={`${carrier} logo`}
                 />
               </div>
             </li>
@@ -59,34 +49,31 @@ const TicketListItem = ({ticketData}) => {
         <Segment flightData={flightThere} />
         <Segment flightData={flightBack} />
       </div>
-    </>
-  )
+    </div>
+  );
 };
 
 TicketListItem.propTypes = {
   ticketData: PropTypes.shape({
-
     price: PropTypes.number.isRequired,
     carrier: PropTypes.string.isRequired,
 
     flightThere: PropTypes.shape({
-      route: PropTypes.string.isRequired,
-      departureAndArrivalTime: PropTypes.string.isRequired,
+      origin: PropTypes.string.isRequired,
+      destination: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
       duration: PropTypes.number.isRequired,
-      numberOfTransfers: PropTypes.string.isRequired,
-      stops: PropTypes.arrayOf(
-        PropTypes.string.isRequired).isRequired,
+      stops: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     }).isRequired,
 
     flightBack: PropTypes.shape({
-      route: PropTypes.string.isRequired,
-      departureAndArrivalTime: PropTypes.string.isRequired,
+      origin: PropTypes.string.isRequired,
+      destination: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
       duration: PropTypes.number.isRequired,
-      numberOfTransfers: PropTypes.string.isRequired,
-      stops: PropTypes.arrayOf(
-        PropTypes.string.isRequired).isRequired,
+      stops: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
     }).isRequired,
-  }).isRequired
+  }).isRequired,
 };
 
-export default withClass(ticket)(TicketListItem);
+export default TicketListItem;
