@@ -18,8 +18,7 @@ Sass
 
 CSS Modules
 
-classnames:
-https://www.npmjs.com/package/classnames
+classnames
 
 babel
 
